@@ -1,0 +1,45 @@
+<section class="container">
+  <h1>Apple Flagship Store  </h1>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Sold</th>
+      <th>Image</th>
+    </tr>
+    <%= for item <- crawl_data() do %>
+      <tr>
+        <td>
+          <p><%= item["name"] %></p>
+        </td>
+        <td>
+          <p><%= item["price"] %></p>
+        </td>
+        <td>
+          <p><%= item["quan"] %></p>
+        </td>
+        <td><img src="<%= item["img_url"]%>"></td>
+      </tr>
+    <% end %>
+  </table>
+</section>
+<!---
+<section class="container">
+  <h1>Apple Flagship Store  </h1>
+  <div class="d-flex">
+    <%= for item <- crawl_data do %>
+      <div class="item">
+        <div>
+          <img src="<%= item["img_url"]%>">
+        </div>
+        <div class="">
+          <p><%= item["name"] %></p>
+        </div>
+        <div class="">
+          <p><%= item["price"] %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>
+--->
