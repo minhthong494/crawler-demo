@@ -7,7 +7,7 @@
       <th>Sold</th>
       <th>Image</th>
     </tr>
-    <%= for item <- crawl_data() do %>
+    <%= for item <- @data do %>
       <tr>
         <td>
           <p><%= item["name"] %></p>
@@ -27,7 +27,7 @@
 <section class="container">
   <h1>Apple Flagship Store  </h1>
   <div class="d-flex">
-    <%= for item <- crawl_data do %>
+    <%= for item <- @data do %>
       <div class="item">
         <div>
           <img src="<%= item["img_url"]%>">
