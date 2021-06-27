@@ -12,9 +12,10 @@ defmodule CrawlerDemo.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: CrawlerDemo.PubSub},
       # Start the Endpoint (http/https)
-      CrawlerDemoWeb.Endpoint
+      CrawlerDemoWeb.Endpoint,
       # Start a worker by calling: CrawlerDemo.Worker.start_link(arg)
-      # {CrawlerDemo.Worker, arg}
+      # {CrawlerDemo.Worker, arg},
+      {SimpleCache, []}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
