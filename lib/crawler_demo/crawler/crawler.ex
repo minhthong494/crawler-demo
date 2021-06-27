@@ -12,7 +12,6 @@ defmodule Crawler do
       price =
         Floki.find(children, "._1ObP5d .WTFwws._1lK1eK._5W0f35 ._29R_un") |> Floki.text(sep: "-")
 
-      IO.inspect(price)
       quan = Floki.find(children, "._1ObP5d .go5yPW") |> Floki.text()
 
       img_url = Floki.find(children, "._25_r8I>img") |> Floki.attribute("src") |> Floki.text()
